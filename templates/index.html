@@ -10,9 +10,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container justify-content-center">
             <div class="navbar-nav">
-                <a class="nav-link active" href="index.html">خانه</a>
-                <a class="nav-link" href="about.html">درباره ما</a>
-                <a class="nav-link" href="contact.html">تماس</a>
+		    <a class="nav-link active" href="{{ url_for('home') }}">خانه</a>
+		    <a class="nav-link" href="{{ url_for('about') }}">درباره ما</a>
+		    <a class="nav-link" href="{{ url_for('contact') }}">تماس</a>
             </div>
         </div>
     </nav>

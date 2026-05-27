@@ -9,9 +9,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <div class="container justify-content-center">
             <div class="navbar-nav">
-                <a class="nav-link" href="index.html">خانه</a>
-                <a class="nav-link" href="about.html">درباره ما</a>
-                <a class="nav-link active" href="contact.html">تماس</a>
+                <a class="nav-link" href="{{ url_for('home') }}">خانه</a>
+		    <a class="nav-link" href="{{ url_for('about') }}">درباره ما</a>
+		    <a class="nav-link active" href="{{ url_for('contact') }}">تماس</a>
             </div>
         </div>
     </nav>
@@ -29,6 +29,10 @@
             </div>
         </div>
     </div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  	<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
 </body>
 </html>
 

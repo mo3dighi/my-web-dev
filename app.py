@@ -3,15 +3,19 @@ from flask import Flask, render_template
 app = Flask(__name__)
 # ____ ---- _____
 
+@app.route('/')
+def home():
+    return render_template("index.html")
 
-@app.route("/sum/<x>/<y>")
-def sum(x,y):
-    return f"<h> {x} + {y} =  {int(x) + int(y)}!</h>"
 
-@app.route("/<names>/<num>")
-def account(names, num):
-    response = int(num) - 18
-    return render_template("index.html", name=names, age=response) 
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+ 
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 # ____ ----- ______
 
