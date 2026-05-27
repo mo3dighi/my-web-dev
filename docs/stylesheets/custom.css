@@ -1,0 +1,203 @@
+/* ---------- Base colors ---------- */
+
+body {
+    background: #f6f7f9;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    line-height: 1.7;
+}
+
+/* ---------- Links ---------- */
+
+a {
+    color: #ea580c;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 0.4em;
+    border-bottom: 2px solid #fed7aa; /* خط نازک نارنجی خیلی کم‌رنگ */
+    padding-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+    color: #111827;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 1.2em;
+    margin-bottom: 0.2em;
+}
+
+a:hover {
+    color: #c2410c;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    background: #fb923c !important;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar-brand,
+.navbar a {
+    color: white !important;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+    max-width: 1200px;
+}
+
+.col-md-9 {
+    max-width: 860px;
+}
+
+/* ---------- Sidebar ---------- */
+
+.bs-sidebar.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.bs-sidebar .nav > li > a {
+    border-radius: 6px;
+    padding: 6px 14px;
+    transition: all .15s ease;
+}
+
+.bs-sidebar .nav > li > a:hover {
+    background: #fff7ed;
+}
+
+.bs-sidebar .nav > li > a.active {
+    background: #fed7aa;
+    color: #9a3412;
+    font-weight: 500;
+}
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* ---------- Code ---------- */
+
+pre {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+code {
+    background: #fff1e6;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* ---------- Images ---------- */
+
+.col-md-9 img {
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* ---------- Tables ---------- */
+
+.col-md-9 ul,
+.col-md-9 ol {
+    padding-left: 1.4rem;
+    margin-bottom: 0.8em;
+}
+
+.col-md-9 li {
+    margin-bottom: 0.25em;
+}
+
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* آیتم‌های navbar */
+.navbar-nav > li > a {
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+thead {
+    background: #ffedd5;
+}
+/* باکس سرچ */
+.navbar-form .form-control {
+    border-radius: 999px;
+    border: none;
+    padding: 4px 12px;
+}
+
+/* ---------- Footer ---------- */
+.admonition {
+    border-radius: 8px;
+    border-left: 4px solid #fb923c;
+    background: #fff7ed;
+    padding: 10px 14px;
+    margin: 1em 0;
+}
+
+.admonition-title {
+    font-weight: 600;
+    color: #9a3412;
+    margin-bottom: 0.3em;
+}
+
+
+footer {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+pre {
+    position: relative;
+    padding-left: 18px;
+}
+
+pre::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 2px;
+    background: #fb923c;
+}
+
+
+.col-md-9 a {
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(234, 88, 12, 0.5);
+}
+
+.col-md-9 a:hover {
+    border-bottom-style: solid;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
