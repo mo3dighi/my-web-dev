@@ -244,7 +244,30 @@ if __name__ == "__main__":
 </body>
 </html>
 ```
+### مثال دوم
 
+```python
+from flask import Flask, render_template, request, flash
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "mysecretkey"
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        name = request.form.get("name")
+
+        if not name:
+            flash("لطفاً اسم را وارد کن.")
+        else:
+            flash(f"{name} جان، فرم با موفقیت ارسال شد.")
+
+    return render_template("contact.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+```
 ### توضیح
 
 - `flash(...)`  
