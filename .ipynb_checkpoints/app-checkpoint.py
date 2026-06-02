@@ -38,11 +38,6 @@ def home():
 def list_blog():
     return render_template("list_blog.html", posts=post)
 
-@app.route('/blog/<int:id>')
-def detail_blog(id):
-    s_post = next((p for p in post if p["id"] == id), None)
-    return render_template("detail_blog.html", posts=s_post)
-
 
 @app.route('/contact', methods=['POST','GET'])
 def contact():

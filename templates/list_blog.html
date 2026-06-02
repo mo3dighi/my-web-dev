@@ -11,14 +11,18 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container justify-content-center">
             <div class="navbar-nav">
-                <a class="nav-link" href="index.html">خانه</a>
-                <a class="nav-link active" href="blog.html">وبلاگ</a>
-                <a class="nav-link" href="about.html">درباره ما</a>
-                <a class="nav-link" href="contact.html">تماس</a>
+                
+                <a class="nav-link " href="{{ url_for('home') }}">خانه</a>
+                <a class="nav-link active" href="{{url_for('list_blog')}}">وبلاگ</a>
+                <a class="nav-link" href="{{ url_for('about') }}">درباره ما</a>
+                <a class="nav-link" href="{{ url_for('contact') }}">تماس</a>
             </div>
         </div>
     </nav>
 
+    
+
+   
     <div class="container">
         <div class="row">
             <!-- ستون اصلی مطالب -->
@@ -26,22 +30,17 @@
                 <h2 class="mb-4">آخرین مطالب</h2>
                 
                 <!-- پست ۱ -->
+                 {% for post in posts %}
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title h5">بررسی تکنولوژی‌های جدید ۲۰۲۴</h3>
-                        <p class="card-text text-muted">در این مقاله به بررسی آخرین تغییرات در دنیای فرانت‌اِند و فریم‌ورک‌های جدید می‌پردازیم...</p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">ادامه مطلب</a>
+                        <h3 class="card-title h5">{{ post.title }}</h3>
+                        <p class="card-text text-muted">{{ post.body }}</p>
+                        <a href="/blog/{{ post.id }}" class="btn btn-outline-primary btn-sm">ادامه مطلب</a>
                     </div>
                 </div>
+                {% endfor %}
 
-                <!-- پست ۲ -->
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title h5">چرا از بوت‌استرپ استفاده کنیم؟</h3>
-                        <p class="card-text text-muted">بوت‌استرپ هنوز هم یکی از محبوب‌ترین ابزارها برای طراحی سریع و ریسپانسیو است...</p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">ادامه مطلب</a>
-                    </div>
-                </div>
+               
             </div>
 
             <!-- سایدبار (کناره) -->
@@ -58,6 +57,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
+
+    
 </body>
 </html>
